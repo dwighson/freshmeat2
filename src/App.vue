@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Nav/>
+    <!-- <Nav/>
     <transition name="slide-fade">
       <router-view></router-view>
-    </transition>
+    </transition> -->
   </div>
 </template>
 
