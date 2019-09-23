@@ -83,7 +83,7 @@ nav {
   width: 100%;
   overflow: hidden;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   border-bottom: 3px solid white;
   top: 0;
   text-transform: uppercase;

@@ -61,13 +61,13 @@ export default {
         dots: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        fade: true,
+        // fade: true,
         infinite: true,
-        speed: 500,
-        cssEase: "linear",
+        // speed: 500,
+        // cssEase: "linear",
         focusOnSelect: true,
         arrows: false,
-        // variableWidth: true,
+        variableWidth: true,
         responsive: [
           {
             breakpoint: 768,
