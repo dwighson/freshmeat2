@@ -66,7 +66,7 @@ export default {
       });
       setTimeout(() => {
         $("nav").css({
-          "min-height": "205px"
+          "min-height": "215px"
         });
       }, 0);
     }
