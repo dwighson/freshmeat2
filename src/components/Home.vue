@@ -8,7 +8,7 @@
             <button>learn more</button>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1542851041-0a2a651561a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+            src="https://images.unsplash.com/photo-1540228510585-5f95da870c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
           >
         </div>
         <div class="card">
@@ -17,16 +17,7 @@
             <button>learn more</button>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1546593928-0e028d71af91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-          >
-        </div>
-        <div class="card">
-          <div class="infobox">
-            <h2>artiest naam3</h2>
-            <button>learn more</button>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1542851041-0a2a651561a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+            src="https://images.unsplash.com/photo-1540228510585-5f95da870c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
           >
         </div>
         <div class="card">
@@ -34,8 +25,17 @@
             <h2>artiest naam</h2>
             <button>learn more</button>
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1542851041-0a2a651561a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+      <img
+            src="https://images.unsplash.com/photo-1540228510585-5f95da870c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          >
+        </div>
+        <div class="card">
+          <div class="infobox">
+            <h2>artiest naam</h2>
+            <button>learn more</button>
+          </div>
+    <img
+            src="https://images.unsplash.com/photo-1540228510585-5f95da870c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
           >
         </div>
       </div>
@@ -147,7 +147,10 @@ export default {
   z-index: 3;
   text-transform: uppercase;
   transform: translateX(-50%) translateY(-50%);
-  top: 50%;
+  top: calc(50%);
+}
+.infobox h2 {
+  margin-bottom: 5px;
 }
 .infobox button {
   height: 40px;
@@ -172,6 +175,7 @@ export default {
 .home .card img {
   height: 100vh;
   width: 100%;
+  object-position: 70% 120%;
   /* filter: saturate(2); */
   object-fit: cover;
 }
