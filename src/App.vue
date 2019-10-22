@@ -1,34 +1,44 @@
 <template>
   <div id="app">
-    <!-- <Nav/>
-    <transition name="slide-fade">
+    <a name="home" id="home"></a>
+
+    <Nav />
+    <transition name="page" mode="out-in">
       <router-view></router-view>
-    </transition> -->
+    </transition>
   </div>
 </template>
 
 <script>
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 // import $ from 'jquery'
 import jQuery from "jquery";
 window.jQuery = window.$ = jQuery;
 export default {
   name: "App",
   components: {
-    Nav
+    Nav,
+    Footer
   },
   mounted() {
-    document.body.height = window.innerHeight;
+    emailjs.init("user_KlCkRjkTOxFPsK5ekrshB");
 
-    window.onresize = function() {
-      document.body.height = window.innerHeight;
-    };
-    window.onresize();
+    // document.body.height = window.innerHeight;
+
+    // window.onresize = function() {
+    //   document.body.height = window.innerHeight;
+    // };
+    // window.onresize();
+
   }
 };
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,400,600,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 * {
   outline: none;
 }
@@ -39,12 +49,23 @@ export default {
 }
 html,
 body {
-  background: #141414;
+  background: black;
   margin: 0;
   padding: 0;
 }
+h1,
+h2,
+h3 {
+  font-family: "Big Shoulders Text", Helvetica;
+  /* text-transform: capitalizes; */
+}
+p,
+input,
+textarea {
+  font-family: roboto !important;
+}
 #app {
-  font-family: Helvetica;
+  font-family: "Big Shoulders Text", Helvetica;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -52,32 +73,18 @@ body {
   /* background: black; */
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-height: 99.9vh;
   box-sizing: border-box;
 }
-.fade-enter-active,
-.fade-leave-active {
-  position: absolute;
-  transition: opacity 0.5s;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.15s ease-in-out;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.page-enter,
+.page-leave-to {
   opacity: 0;
-}
-
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  position: absolute;
-
-  opacity: 0;
+  /* -webkit-filter: blur(8px); */
+  transform: translateX(2px);
 }
 </style>
