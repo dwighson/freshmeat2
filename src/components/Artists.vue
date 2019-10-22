@@ -67,11 +67,9 @@
           <h2>{{dj.name}}</h2>
           <h2>{{dj.genre}}</h2>
           <div class="social">
-            <button v-for="(account, x) in dj.social[0]" v-on:click="social()">
-              <a href></a>
-
+            <button v-for="(account, x) in dj.social[0]" v-bind:key="x">
               <span v-if="account === dj.social[0]['insta']">
-                <a href="https://instagram.com/geekwithattitude">
+                <a :href="'https://instagram.com/' + account">
                   <img
                     src="https://media.discordapp.net/attachments/628330179428614147/633446829312442423/instagram.png"
                     alt="instagram"
@@ -79,18 +77,21 @@
                 </a>
               </span>
               <span v-if="account === dj.social[0]['soundcloud']">
-                <img
-                  src="https://media.discordapp.net/attachments/628330179428614147/633447276492357658/soundcloud.png"
-                  alt="soundcloud"
-                />
+                <a :href="'https://soundcloud.com/' + account">
+                  <img
+                    src="https://media.discordapp.net/attachments/628330179428614147/633447276492357658/soundcloud.png"
+                    alt="soundcloud"
+                  />
+                </a>
               </span>
               <span v-if="account === dj.social[0]['facebook']">
-                <img
-                  src="https://media.discordapp.net/attachments/628330179428614147/633447038268211200/facebook-logo.png"
-                  alt="facebook"
-                />
+                <a :href="'https://facebook.com/' + account">
+                  <img
+                    src="https://media.discordapp.net/attachments/628330179428614147/633447038268211200/facebook-logo.png"
+                    alt="facebook"
+                  />
+                </a>
               </span>
-
               <!-- <p v-if="account[soundcloud]">s</p> -->
             </button>
           </div>
