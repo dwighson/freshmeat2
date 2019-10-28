@@ -127,6 +127,7 @@ export default {
         // dots: true,
         // centerMode: true,
         // variableWidth: true
+        autoplay: true,
         dots: false,
         arrows: false,
         infinite: true,
@@ -216,7 +217,7 @@ export default {
 }
 .filler:hover .blurr,
 .filler:hover .shade {
-  opacity: 1;
+  opacity: 0;
 }
 .contact li .icon {
   height: 25px;
