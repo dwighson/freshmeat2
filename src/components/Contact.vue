@@ -1,17 +1,58 @@
 <template>
   <div class="contact">
     <span class="wrap">
-      <div class="filler">
-        <div class="blurr"></div>
-        <div class="shade"></div>
-        <div class="spacing"></div>
-        <h1>GET IN TOUCH</h1>
-        <b>
-          <p>Want to collaborate? Grab a cup of coffee? Have a good idea or just want to meet up?</p>
-          <!-- <br> -->
-          <p>Don’t hesitate to get in contact!</p>
-        </b>
-        <!-- <div class="fm"></div> -->
+      <div class="contact-slider">
+        <div>
+          <div
+            class="filler"
+            style="background: url('https://media.discordapp.net/attachments/628330179428614147/631646694102269953/WhatsApp_Image_2019-07-16_at_01.56.46.jpeg?width=1410&height=794') no-repeat center center; background-size:cover"
+          >
+            <div class="blurr"></div>
+            <div class="shade"></div>
+            <div class="spacing"></div>
+            <h1>GET IN TOUCH</h1>
+            <b>
+              <p>Want to collaborate? Grab a cup of coffee? Have a good idea or just want to meet up?</p>
+              <!-- <br> -->
+              <p>Don’t hesitate to get in contact!</p>
+            </b>
+            <!-- <div class="fm"></div> -->
+          </div>Î
+        </div>
+        <div>
+          <div
+            class="filler"
+            style="background: url('https://cdn.discordapp.com/attachments/628330179428614147/628331149755940873/IMG-3999.PNG') no-repeat center center; background-size:cover"
+          >
+            <div class="blurr"></div>
+            <div class="shade"></div>
+            <div class="spacing"></div>
+            <h1>GET IN TOUCH</h1>
+            <b>
+              <p>Want to collaborate? Grab a cup of coffee? Have a good idea or just want to meet up?</p>
+              <!-- <br> -->
+              <p>Don’t hesitate to get in contact!</p>
+            </b>
+            <!-- <div class="fm"></div> -->
+          </div>Î
+        </div>
+        <div>
+          <div
+            class="filler"
+            style="background: url('https://cdn.discordapp.com/attachments/628330179428614147/628331148925206610/IMG-4005.PNG') no-repeat center center; background-size:cover"
+          >
+            <div class="blurr"></div>
+            <div class="shade"></div>
+            <div class="spacing"></div>
+            <h1>GET IN TOUCH</h1>
+            <b>
+              <p>Want to collaborate? Grab a cup of coffee? Have a good idea or just want to meet up?</p>
+              <!-- <br> -->
+              <p>Don’t hesitate to get in contact!</p>
+            </b>
+            <!-- <div class="fm"></div> -->
+          </div>Î
+        </div>
       </div>
       <div class="wrapper">
         <a name="contact" id="contact"></a>
@@ -34,15 +75,36 @@
             </li>
             <!-- <li>
               <div class="icon"></div>06876543344
-            </li> -->
+            </li>-->
             <li>
-              <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/635101118619320360/envelope.png" alt=""></div>info@freshmeatbookings.com
+              <a href="mailto:info@freshmeatbookings.com">
+                <div class="icon">
+                  <img
+                    src="https://media.discordapp.net/attachments/628330179428614147/635101118619320360/envelope.png"
+                    alt
+                  />
+                </div>info@freshmeatbookings.com
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/FreshMeatBookings">
+                <div class="icon">
+                  <img
+                    src="https://media.discordapp.net/attachments/628330179428614147/633447038268211200/facebook-logo.png"
+                    alt
+                  />
+                </div>FreshMeatBookings Facebook
+              </a>
             </li>
             <li>
               <a href="https://www.instagram.com/freshmeatbookings/">
-              <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/638411114597711909/instagram.png" alt=""></div> Freshmeatbookings   
+                <div class="icon">
+                  <img
+                    src="https://media.discordapp.net/attachments/628330179428614147/638411114597711909/instagram.png"
+                    alt
+                  />
+                </div>Freshmeatbookings Instagram
               </a>
-           
             </li>
             <li>
               <!-- <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/635101386526162964/placeholder.png" alt=""></div>Schiedamse Vest 91A 3012BG Rotterdam -->
@@ -55,7 +117,25 @@
 </template>
 
 <script>
+import slick from 'slick-carousel'
 export default {
+  mounted() {
+    $(document).ready(function() {
+      $(".contact-slider").slick({
+        // slidesToShow: 3,
+
+        // dots: true,
+        // centerMode: true,
+        // variableWidth: true
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear"
+      });
+    });
+  },
   methods: {
     sendform() {
       var myform = $("form#contact-form");
@@ -94,7 +174,10 @@ export default {
 * {
   /* outline: 1px solid red; */
 }
-h1 {
+.contact-slider {
+  width: 50%;
+}
+.contact h1 {
   /* padding: 25px; */
 
   /* margin: 0 auto; */
@@ -123,11 +206,11 @@ h1 {
   margin: 0 auto;
   /* background: purple; */
 }
-a {
+.contact a {
   text-decoration: none;
   color: white;
 }
-.shade {
+.contact .shade {
   background: rgba(0, 0, 0, 0.3);
   opacity: 1 !important;
 }
@@ -135,7 +218,7 @@ a {
 .filler:hover .shade {
   opacity: 1;
 }
-li .icon {
+.contact li .icon {
   height: 25px;
   width: 25px;
   background: white;
@@ -144,14 +227,14 @@ li .icon {
   float: left;
   margin-right: 5px;
 }
-.icon img {
+.contact .icon img {
   height: 15px;
   margin-top: 5px;
   /* line-height: 25px; */
   /* margin: 0 auto; */
 }
 /* .filler:hover  */
-.blurr {
+.contact .blurr {
   height: calc(100% + 20px);
   width: calc(100% + 20px);
   position: absolute;
@@ -177,7 +260,7 @@ li .icon {
   /* background: green; */
   font-size: 25px;
 }
-.block {
+.contact .block {
   height: calc(100vh - 100px);
   width: 50%;
   /* flex: 1; */
@@ -185,7 +268,7 @@ li .icon {
     no-repeat center center;
   background-size: cover;
 }
-.maps {
+.contact .maps {
   height: 400px;
   text-align: left;
   /* padding: 0px 20px; */
@@ -195,7 +278,7 @@ li .icon {
   color: white;
   /* background: purple; */
 }
-.maps ul {
+.contact .maps ul {
   /* background: green; */
   /* padding-right: 40px; */
 
@@ -203,11 +286,11 @@ li .icon {
   margin: 0;
   padding-top: 50px;
 }
-.maps li:nth-child(2) {
+.contact .maps li:nth-child(2) {
   /* background: purple; */
   height: 50px;
 }
-.maps li h1 {
+.contact .maps li h1 {
   /* background: green; */
   height: 40px;
   padding: 0;
@@ -215,7 +298,7 @@ li .icon {
   font-size: 25px;
 }
 
-.fm {
+.contact .fm {
   background: url("https://media.discordapp.net/attachments/628330179428614147/629029556350877716/Fresh-Meat.png?width=665&height=665")
     no-repeat center center;
   background-size: contain;
@@ -226,7 +309,7 @@ li .icon {
   width: calc(310px);
   /* margin: 0 auto; */
 }
-.maps li {
+.contact .maps li {
   font-size: 20px;
   /* background: blue; */
   text-transform: capitalize;
@@ -270,7 +353,7 @@ li .icon {
   text-align: center;
   /* padding-top: 140px; */
 }
-.wrapper {
+.contact .wrapper {
   /* background: blue; */
   /* backgroun */
   /* height: 100vh; */
@@ -299,10 +382,10 @@ li .icon {
   /* display: inline-block; */
   vertical-align: top;
 }
-input:first-of-type {
+.contact input:first-of-type {
   margin: 0;
 }
-input {
+.contact input {
   padding: 15px;
   background: white;
   border: none;
@@ -330,11 +413,11 @@ input {
   width: calc(100% - 0px);
   /* max-width: 550px; */
 }
-button:hover {
+.contact button:hover {
   background: white;
   color: black;
 }
-button {
+.contact button {
   height: 50px;
   min-width: 200px;
   background: white;
@@ -357,6 +440,7 @@ button {
   .wrap {
     flex-direction: column;
   }
+  .contact-slider,
   .filler {
     max-height: 650px;
     width: 100%;
@@ -381,7 +465,7 @@ button {
     /* width: 100px !important; */
     text-align: center;
   }
-  input {
+  .contact input {
     padding: 20px;
     box-sizing: border-box;
     margin: 0;
@@ -390,7 +474,7 @@ button {
     width: calc(100% - 50px);
     max-width: 550px;
   }
-  h1 {
+  .contact h1 {
     max-width: 550px;
 
     margin: 0 auto;
