@@ -39,7 +39,13 @@
               <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/635101118619320360/envelope.png" alt=""></div>info@freshmeatbookings.com
             </li>
             <li>
-              <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/635101386526162964/placeholder.png" alt=""></div>Schiedamse Vest 91A 3012BG Rotterdam
+              <a href="https://www.instagram.com/freshmeatbookings/">
+              <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/638411114597711909/instagram.png" alt=""></div> Freshmeatbookings   
+              </a>
+           
+            </li>
+            <li>
+              <!-- <div class="icon"><img src="https://media.discordapp.net/attachments/628330179428614147/635101386526162964/placeholder.png" alt=""></div>Schiedamse Vest 91A 3012BG Rotterdam -->
             </li>
           </ul>
         </div>
@@ -116,6 +122,10 @@ h1 {
 
   margin: 0 auto;
   /* background: purple; */
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 .shade {
   background: rgba(0, 0, 0, 0.3);

@@ -7,7 +7,8 @@ export const store = new Vuex.Store({
   state: {
     djs: [
       {
-        name: "lewis",
+        name: "mc lewis ramos",
+        url: "lewis",
         thumbnail:
           "https://cdn.discordapp.com/attachments/628330179428614147/634045556326662173/lewis.jpg",
         bio:
@@ -23,6 +24,7 @@ export const store = new Vuex.Store({
       },
       {
         name: "dorisbae",
+        url: "dorisbae",
         thumbnail:
           "https://cdn.discordapp.com/attachments/628330179428614147/634045536235946014/doris.jpg",
         bio:
@@ -37,6 +39,7 @@ export const store = new Vuex.Store({
       },
       {
         name: "mike",
+        url: "mike",
         thumbnail:
           "",
         bio:
@@ -52,6 +55,7 @@ export const store = new Vuex.Store({
       },
       {
         name: "zeus",
+        url: "zeus",
         thumbnail:
           "https://cdn.discordapp.com/attachments/628330179428614147/634045558314631188/zeus.jpg",
         bio:
@@ -67,11 +71,12 @@ export const store = new Vuex.Store({
       },
       {
         name: "lenny",
+        url: "lenny",
         thumbnail:
           "https://cdn.discordapp.com/attachments/628330179428614147/634045553583456256/Lenny.jpg",
         bio:
           "Lenny begon met draaien op zijn tiende en heeft allerlei verschillende stijlen beoefend. Dat brengt hem vandaag de dag bij een unieke eigen sound met een mix van afro, baile-funk, future beats en urban als hoofdlijn, met soms uitstapjes naar housemuziek. Door zijn lange en brede ervaring weet hij als geen ander het publiek mee te nemen in zijn muzikale reis. Naast het DJ-en is hij ook producer en produceert hij voornamelijk exclusieve club-edit’s die zijn DJ-sets onderscheiden. Buiten Lenny’s muziekcarrière is hij ook oprichter/organisator van Panchi, waar HipHop, Baile Funk, Future Beats, R&B, en Dancehall de boventoon voeren. Waar Lenny is, is er ook altijd feest! Clubs waar Lenny onder andere heeft gestaan: Hollywood Music Hall, Corso, NOW&WOW, Villa Thalia, Cruise Terminal, Superdisco Rotterdam, BAR Rotterdam, Waterfront, The Vip Room, Factory 010, Perron, WORM, Bird, Sensation (Chersonissos), Triangle Festival, PKHS Tilburg.",
-        genre: "HipHop, R&B",
+        genre: "-",
         social: [
           {
             insta: "lewiselisio",

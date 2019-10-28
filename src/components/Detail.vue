@@ -9,26 +9,26 @@
         'dorisbae': $route.params.id == 'dorisbae', 
         'lenny': $route.params.id == 'lenny', 
         }"
-      v-bind:style="{background: 'url('+ djs.find((artist) =>  artist.name == currentroute).thumbnail +') no-repeat top center'}"
+      v-bind:style="{background: 'url('+ djs.find((artist) =>  artist.url == currentroute).thumbnail +') no-repeat top center'}"
     >
       <div class="headerinfo">
-        <h3>{{djs.find((artist) => artist.name == currentroute).name}}</h3>
+        <h3>{{djs.find((artist) => artist.url == currentroute).name}}</h3>
 
-        <p>{{djs.find((artist) => artist.name == currentroute).genre}}</p>
+        <p>{{djs.find((artist) => artist.url == currentroute).genre}}</p>
       </div>
       <div class="artistinfo">
         <span class="infowrap">
-          <h2>About {{djs.find((artist) => artist.name == currentroute).name}}</h2>
+          <h2>About {{djs.find((artist) => artist.url == currentroute).name}}</h2>
           <br />
-          <p>{{djs.find((artist) => artist.name == currentroute).bio}}</p>
+          <p>{{djs.find((artist) => artist.url == currentroute).bio}}</p>
         </span>
       </div>
     </div>
     <div class="aboutartist">
       <span class="infowrap">
-        <h2>About {{djs.find((artist) => artist.name == currentroute).name}}</h2>
+        <h2>About {{djs.find((artist) => artist.url == currentroute).name}}</h2>
         <br />
-        <p>{{djs.find((artist) => artist.name == currentroute).bio}}</p>
+        <p>{{djs.find((artist) => artist.url == currentroute).bio}}</p>
       </span>
     </div>
     <form id="bookingform">
@@ -56,13 +56,13 @@
           <br />
           <span v-for="(q, i) in QnA" v-if="i <= 5" v-bind:key="i">
             <p>{{i+2}}: {{q.q}}</p>
-            <input type="text" v-model="q.a" :placeholder="q.a" :name="q.name" required />
+            <input type="text" v-model="q.a" :placeholder="q.a" :name="q.url" required />
           </span>
         </div>
         <div class="block">
           <span v-for="(q, i) in QnA" v-if="i >= 6" v-bind:key="i">
             <p>{{i+2}}: {{q.q}}</p>
-            <input type="text" v-model="q.a" :name="q.name" required />
+            <input type="text" v-model="q.a" :name="q.url" required />
           </span>
           <p>additional info</p>
           <textarea name="additional"></textarea>
@@ -144,7 +144,7 @@ export default {
   },
   methods: {
     findartist(artist) {
-      return artist.name === artist;
+      return artist.url === artist;
     },
     sendform() {
       var myform = $("form#bookingform");

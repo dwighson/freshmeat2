@@ -98,8 +98,8 @@
         </div>
         <div class="info">
           <h2>About {{dj.name}}</h2>
-          <p>{{dj.bio}}</p>
-          <button v-on:click="goto('/artist/' + dj.name)">book now</button>
+          <p>{{dj.biomobile}}</p>
+          <button v-on:click="goto('/artist/' + dj.name)">Learn More</button>
         </div>
       </section>
     </div>
@@ -117,11 +117,12 @@ export default {
     return {
       djs: [
         {
-          name: "lewis",
+          name: "mc lewis ramos",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646717766271006/DSC06045-Edit.jpg?width=855&height=1140",
           bio:
             "Lewis Ramos is 20 jaar en een veelzijdige MC die zich thuis voelt in de HipHop/R&b wereld, maar zeker niet bang is om uit zijn comfortzone te stappen. Op zijn 18e is hij dan ook begonnen met avonden hosten bij het collectief Chips in Rotterdam waar hij elke donderdag in de basement zijn kunsten vertoonde. De jongeman brengt veel energie over aan het publiek en zorgt voor een feestje. Lewis Ramos is in 2019 als een komeet ...",
+          biomobile: 'Lewis Ramos is 20 jaar en een veelzijdige MC die zich thuis voelt in de HipHop/R&b wereld, maar zeker niet bang...',
           genre: "HipHop, R&B",
           social: [
             {
@@ -132,11 +133,12 @@ export default {
           ]
         },
         {
-          name: "dorisbae",
+          name: "doris bae",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646677580906497/DSC05936-Edit.jpg?width=855&height=1140",
           bio:
             "Als dochter van een een jazz pianist was er op jonge leeftijd geen gebrek aan muzikaliteit om haar heen. De piano werd een viool, de viool weer de piano waarna de piano werd ingewisseld voor een mengpaneel. Ze is pas een jaar bezig maar al bijna niet meer weg te denken. Ze zingt de tracks af en toe net zo hard mee als het publiek en swingend achter de dj booth is ze constant op zoek naar de perfecte balans tussen hiphop, rnb & guilty pleasures. Veel hitte!!...",
+          biomobile: 'Als dochter van een een jazz pianist was er op jonge leeftijd geen gebrek aan muzikaliteit om haar heen...',          
           genre: "HipHop, R&B, Guilty Pleasures",
           social: [
             {
@@ -151,6 +153,8 @@ export default {
             "https://media.discordapp.net/attachments/628330179428614147/631646721436287026/DSC05772-Edit.jpg?width=855&height=1140",
           bio:
             "De geboren Papendrechter, is gemaakt voor de spotlight en verhuisde via Tilburg naar Rotterdam, om zich thuis te maken in meerdere partyscenes. Begonnen als resident van Superdisco maar hij ontwikkelde zich snel als multitalent. Ondertussen heeft hij zichzelf laten zien op verschillende podia. Bij Annabel, Now&Wow en eerdergenoemde Superdisco is hij meermaals te horen geweest. Zijn eerste stappen buiten de stad is hij bij Yardbird (in Tilburg) aan het maken...",
+          biomobile: 'De geboren Papendrechter, is gemaakt voor de spotlight en verhuisde via Tilburg naar Rotterdam, om...',
+          
           genre: "​",
           social: [
             {
@@ -166,7 +170,9 @@ export default {
             "https://media.discordapp.net/attachments/628330179428614147/631646718676697098/DSC06105.jpg?width=855&height=1140",
           bio:
             "Zeus is a young multi-talented DJ based in Rotterdam. Zeus is a resident of the party HUNNA and  gives the Trap genre a new look and goes back to their sources of inspiration. Also, with a great love for music he decided to share this love, later on by developing his own vision on how to represent different genres like house and hip hop and combining them.  Zeus also loves to spin a combination of forgotten hiphop tunes and similar.  Expect the latest hiphop-tunes combined with the some old school classics...",
-          genre: "HipHop, R&B",
+          biomobile: 'Zeus is a young multi-talented DJ based in Rotterdam. Zeus is a resident of the party HUNNA and...',
+         
+         genre: "HipHop, R&B",
           social: [
             {
               insta: "zeusofficial.nl",
@@ -181,7 +187,9 @@ export default {
             "https://media.discordapp.net/attachments/628330179428614147/631646710459924500/DSC05981.jpg?width=855&height=1140",
           bio:
             "Lenny begon met draaien op zijn tiende en heeft allerlei verschillende stijlen beoefend. Dat brengt hem vandaag de dag bij een unieke eigen sound met een mix van afro, baile-funk, future beats en urban als hoofdlijn, met soms uitstapjes naar housemuziek. Door zijn lange en brede ervaring weet hij als geen ander het publiek mee te nemen in zijn muzikale reis. Naast het DJ-en is hij ook producer en produceert hij voornamelijk exclusieve club-edit’s die zijn DJ-sets onderscheiden. Buiten Lenny’s muziekcarrière is hij ook oprichter/organisator van Panchi, waar HipHop, Baile Funk, Future Beats, R&B...",
-          genre: "HipHop, R&B",
+          biomobile: 'Lenny begon met draaien op zijn tiende en heeft allerlei verschillende stijlen beoefend...',
+          
+          genre: "",
           social: [
             {
               insta: "lennydj_",
