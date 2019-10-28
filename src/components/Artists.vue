@@ -99,7 +99,7 @@
         <div class="info">
           <h2>About {{dj.name}}</h2>
           <p>{{dj.biomobile}}</p>
-          <button v-on:click="goto('/artist/' + dj.name)">Learn More</button>
+          <button v-on:click="goto('/artist/' + dj.url)">Learn More</button>
         </div>
       </section>
     </div>
@@ -118,6 +118,7 @@ export default {
       djs: [
         {
           name: "mc lewis ramos",
+          url: "lewis",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646717766271006/DSC06045-Edit.jpg?width=855&height=1140",
           bio:
@@ -135,6 +136,7 @@ export default {
         },
         {
           name: "doris bae",
+          url: "dorisbae",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646677580906497/DSC05936-Edit.jpg?width=855&height=1140",
           bio:
@@ -151,6 +153,7 @@ export default {
         },
         {
           name: "mike",
+          url: "mike",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646721436287026/DSC05772-Edit.jpg?width=855&height=1140",
           bio:
@@ -169,6 +172,7 @@ export default {
         },
         {
           name: "zeus",
+          url: "zeus",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646718676697098/DSC06105.jpg?width=855&height=1140",
           bio:
@@ -187,6 +191,7 @@ export default {
         },
         {
           name: "lenny",
+          url: "lenny",
           thumbnail:
             "https://media.discordapp.net/attachments/628330179428614147/631646710459924500/DSC05981.jpg?width=855&height=1140",
           bio:
@@ -208,15 +213,15 @@ export default {
   },
   mounted() {
     let rtr = this.$router;
-
+    let djs = this.djs
     $(document).ready(function() {
       $(".booknw").click(e => {
         let txt = $(e.target)
           .parent()
           .find("h1")
           .text();
-
-        rtr.push("/artist/" + txt);
+        
+        rtr.push("/artist/" + djs.find((artist) => artist.name == txt).url);
       });
       $(".artist").css({
         width: window.innerWidth / 3 - 100 + "px"

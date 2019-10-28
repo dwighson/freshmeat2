@@ -23,7 +23,7 @@ export const store = new Vuex.Store({
         ]
       },
       {
-        name: "dorisbae",
+        name: "doris bae",
         url: "dorisbae",
         thumbnail:
           "https://cdn.discordapp.com/attachments/628330179428614147/634045536235946014/doris.jpg",
